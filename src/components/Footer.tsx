@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-gray-200 pt-6 dark:border-gray-800">
           <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} CalcVerse. Built for the web. Results are for
+            © {new Date().getFullYear()} Calctra. Built for the web. Results are for
             informational purposes only.
           </p>
         </div>

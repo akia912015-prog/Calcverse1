@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 
 type Theme = 'light' | 'dark';
 
-const STORAGE_KEY = 'calcverse-theme';
+const STORAGE_KEY = 'calctra-theme';
 
 function getInitialTheme(): Theme {
   if (typeof window === 'undefined') return 'light';

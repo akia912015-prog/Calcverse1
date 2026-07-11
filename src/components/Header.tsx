@@ -21,7 +21,7 @@ export default function Header() {
         <button
           onClick={() => go('/')}
           className="flex shrink-0 items-center gap-2"
-          aria-label="CalcVerse home"
+          aria-label="Calctra home"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-sm shadow-brand-600/30">
             <Calculator className="h-5 w-5" />

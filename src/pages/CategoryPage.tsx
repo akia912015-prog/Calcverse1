@@ -7,7 +7,7 @@ export default function CategoryPage({ slug }: { slug: string }) {
   const category = getCategoryBySlug(slug);
 
   useSEO(`/category/${slug}`, category ? {
-    title: `${category.name} Calculators — Free Online Tools | CalcVerse`,
+    title: `${category.name} Calculators — Free Online Tools | Calctra`,
     description: category.description,
   } : undefined);
 

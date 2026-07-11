@@ -8,37 +8,37 @@ type Route = {
 
 const ROUTES: Record<string, Omit<Route, 'path'>> = {
   '/': {
-    title: 'CalcVerse — Free Online Calculators for Finance, Health, Daily Life & Math',
+    title: 'Calctra — Free Online Calculators for Finance, Health, Daily Life & Math',
     description:
       'Free online calculators for finance, health, daily life, and math. Fast, accurate, and beautifully designed.',
   },
   '/category/finance': {
-    title: 'Finance Calculators — Mortgage, Loan, Interest & More | CalcVerse',
+    title: 'Finance Calculators — Mortgage, Loan, Interest & More | Calctra',
     description:
       'Free finance calculators: mortgage payments, loans, compound interest, savings goals, tips, and tax.',
   },
   '/category/health': {
-    title: 'Health Calculators — BMI, BMR, Body Fat & More | CalcVerse',
+    title: 'Health Calculators — BMI, BMR, Body Fat & More | Calctra',
     description:
       'Free health calculators: BMI, BMR (calories), body fat percentage, daily water intake, and ideal weight.',
   },
   '/category/daily-life': {
-    title: 'Daily Life Calculators — Age, Date, Percentage & More | CalcVerse',
+    title: 'Daily Life Calculators — Age, Date, Percentage & More | Calctra',
     description:
       'Free daily life calculators: age, date difference, unit converter, percentage, and fuel cost.',
   },
   '/category/math': {
-    title: 'Math Calculators — Scientific, Quadratic, GCD & More | CalcVerse',
+    title: 'Math Calculators — Scientific, Quadratic, GCD & More | Calctra',
     description:
       'Free math calculators: basic, scientific, quadratic equation solver, GCD/LCM, and triangle solver.',
   },
   '/search': {
-    title: 'Search Calculators | CalcVerse',
-    description: 'Search across all CalcVerse calculators.',
+    title: 'Search Calculators | Calctra',
+    description: 'Search across all Calctra calculators.',
   },
 };
 
-const SITE_NAME = 'CalcVerse';
+const SITE_NAME = 'Calctra';
 
 function buildTitle(title: string) {
   return title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
@@ -47,8 +47,8 @@ function buildTitle(title: string) {
 export function useSEO(path: string, overrides?: Partial<Route>) {
   useEffect(() => {
     const base = ROUTES[path] ?? {
-      title: 'Calculator | CalcVerse',
-      description: 'Free online calculator on CalcVerse.',
+      title: 'Calculator | Calctra',
+      description: 'Free online calculator on Calctra.',
     };
     const meta = { ...base, ...overrides };
     document.title = buildTitle(meta.title);
@@ -69,7 +69,7 @@ export function useSEO(path: string, overrides?: Partial<Route>) {
 }
 
 export function setSEOForCalculator(name: string, description: string, category: string) {
-  const title = `${name} — Free ${category} Calculator | CalcVerse`;
+  const title = `${name} — Free ${category} Calculator | Calctra`;
   document.title = title;
   const descTag =
     document.querySelector('meta[name="description"]') ||
